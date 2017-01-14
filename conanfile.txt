@@ -1,0 +1,7 @@
+[requires]
+luna/2.10.0@DEGoodmanWilson/stable
+engine/1.0-beta26@DEGoodmanWilson/testing
+jsoncpp/1.7.3@theirix/stable
+cpr/1.2.0@DEGoodmanWilson/testing
+[generators]
+cmake
