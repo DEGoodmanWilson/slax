@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <luna/luna.h>
 #include <json/json.h>
 #include <cpr/cpr.h>
@@ -6,7 +7,9 @@
 
 int main(int argc, char **argv)
 {
-    args::ArgumentParser parser("A server for observing Slack events over the Slack Events API.", "Y'all have a nice day.");
+    std::stringstream info;
+    info << "slax " << SLAX_VERSION << " : " << "A server for observing Slack events over the Slack Events API.";
+    args::ArgumentParser parser(info.str(), "Y'all have a nice day.");
     args::Positional<std::string> verification_token{parser, "verification token", "The token that Slack includes in every request it makes. Required"};
     args::ValueFlag<std::string> forward_url{parser, "forwarding URL", "Remote endpoint to forward the event to", {'f', "forward"}};
     args::ValueFlag<std::string> endpoint{parser, "endpoint", "Endpoint to serve. Default is \"/\"", {'e', "endpoint"}, "/"};
