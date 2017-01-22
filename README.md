@@ -27,9 +27,9 @@ What? You don't want to build from source? You want an easy method to get your g
 
 ## Using
 
-There is one require parameter, and several optional parameters to `slax`. You will need to know the *verification token* that Slack has assigned to your app: You can find it on the front of the [app configuration page](http://TODO).
+There is one required parameter, and several optional parameters to `slax`. You will need to know the *verification token* that Slack has assigned to your app: You can find it on the front of the [app configuration page](https://api.slack.com/apps).
 
-Once you have that, it is easy! If your verification token is `abc-123`, then:
+Once you have the verification token, the rest is easy! If your verification token is `abc-123`, then:
 
 ```bash
 $ slax abc-123
@@ -63,7 +63,7 @@ Now, of course, before Slack will send events to `slax` you will need to configu
 
 Your best bet, therefore, is `ngrok`. This is another tool that will create a public (and secure) endpoint for a web service (like `slax`) running somewhere otherwise inaccessible. It punches holes through things (in a reasonable and secure way!) so that Slack can interact with code on your laptop.
 
-If you don't know what that is, you can read more about this amazing tool [here](http://TODO). I'll wait here while you go read about it and install it.
+If you don't know what `ngrok` is, you can read more about this amazing tool [here](https://ngrok.com). I'll wait here while you go read about it and install it.
 
 So, if `slax` is running on port 8023, you can configure `ngrok` as:
 
@@ -77,7 +77,7 @@ Just note the URL that `ngrok` gives you, and feed that to Slack!
 
 Oh, so you want to build it yourself, from source! Good on you. `slax` requires a modern C++ compiler, `cmake` and `conan` to build.
 
-*Note* that at the moment, some of `slax`'s dependencies not compile on Windows. I think. I would love some help on that front!
+*Note* that at the moment, some of `slax`'s dependencies do not compile on Windows. I think. I would love some help on that front!
 
 ```
 $ conan install --build=missing
