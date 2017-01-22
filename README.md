@@ -11,7 +11,19 @@ The Slack Events API Explorer
 
 ## Installing
 
-What? You don't want to build from source? You want an easy method to get your grubby hands on a pre-built binary? I am very sorry to say that at this moment, you are out of luck. You must build from source. For now. See the section on building from source below.
+### Mac
+
+Installation is accomplished with, yes, you guessed it: Homebrew.
+
+```bash
+$ brew install DEGoodmanWilson/tools/slax
+```
+
+### Not-Mac
+
+See the section on building from source below.
+
+What? You don't want to build from source? You want an easy method to get your grubby hands on a pre-built binary? I am very sorry to say that at this moment, you are out of luck. You must build from source. For now.
 
 ## Using
 
